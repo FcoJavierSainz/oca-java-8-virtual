@@ -5,12 +5,17 @@ public class Cuadro {
     int num;
 
 
-    int getCuadrado() {
+    public int getCuadrado() {
         return num * num;
     }
 
 
-    Cuadro(int n) {
+    public Cuadro(int n) {
         num = n;
+    }
+
+
+    public static void main(String[] arguments) {
+        Math.min(4, 5);
     }
 }
