@@ -4,6 +4,10 @@ public class Persona {
     public String nombre;
     private int edad;
 
+    void imprimeNombre () {
+        System.out.println(nombre);
+    }
+
     public static void main(String[] args) {
         int edad = 30;
 
