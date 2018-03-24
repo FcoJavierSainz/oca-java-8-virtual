@@ -7,6 +7,9 @@ public class OperadoresLogicos {
         boolean tareasCompletas = true;
         boolean cursoAprobado = false;
 
+
+        cursoAprobado = aprueboExamenes && tareasCompletas;
+
         //Una forma de representar el anterior caso
         if (aprueboExamenes && tareasCompletas) {
             cursoAprobado = true;

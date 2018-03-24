@@ -14,6 +14,11 @@ public class Confundete {
 
         System.out.println(a == c && c == b);
         System.out.println(a++ == 11 || ++b == 10);
+        //10 == 11
+        //a = a + 1 = 11;
+
+        //b = b + 1  = 11
+        //11 == 10
         System.out.println(!(c > 10) && !(a == 10));
     }
 }
