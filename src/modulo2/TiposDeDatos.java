@@ -27,5 +27,29 @@ public class TiposDeDatos {
 
         int base8 = 010;
         System.out.println(base8);
+
+        int espacios = 10_000;
+        System.out.println(espacios);
+
+        double cientifico = 1.78978978979e2;
+
+        boolean truth = true;
+
+        char c = '\u00F1'; // 16 bits sin signo
+        // unicode = 4*4 = 16
+
+        char ¥charEjemplo3 = (char) -122;
+
+
+        // f = 1111
+
+        System.out.println(¥charEjemplo3);
+
+        // 10 / 3 = 3.33333333333333
+        // $3,333.34
+
+        System.out.println(Integer.parseInt("10_000"));
+
+
     }
 }
