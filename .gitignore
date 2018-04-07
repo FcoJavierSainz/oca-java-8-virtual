@@ -3,6 +3,10 @@
 .idea/**/tasks.xml
 .idea/dictionaries
 .idea/sonarlint
+.idea/checkstyle-idea.xml
+.idea/codeStyles
+.idea/dbnavigator.xml
+
 
 ## Plugin-specific files:
 
