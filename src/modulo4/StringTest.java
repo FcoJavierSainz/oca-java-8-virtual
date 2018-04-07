@@ -40,8 +40,19 @@ public class StringTest {
         System.out.print(":");
         System.out.print(varWithSpaces.trim());
         System.out.print(":");
+        System.out.println();
 
 
+        letters = "ABCAB";
+        System.out.println(letters.replace('B', 'b'));
+        System.out.println(letters.replace("CA", "12"));
+
+        for (int i = 0; i < letters.length(); i++) {
+            System.out.println(letters.charAt(i));
+        }
+
+        System.out.println(letters.startsWith("C", 2));
+        System.out.println(letters.endsWith("ABCAB"));
 
     }
 }
