@@ -3,15 +3,17 @@ package modulo5;
 public class IfElse {
 
   public static void main(String[] args) {
-    int score = 100;
-    if (score > 200)
-      if (score <400)
-        if (score > 300)
+    int score = 500;
+    if (score > 200) {
+      if (score < 400) {
+        if (score > 300) {
           System.out.println(1);
-        else
+        } else {
           System.out.println(2);
-    else
-      System.out.println(3);
-
+        }
+      } else {
+        System.out.println(3);
+      }
+    }
   }
 }

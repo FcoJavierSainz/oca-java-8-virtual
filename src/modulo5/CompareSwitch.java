@@ -3,7 +3,8 @@ package modulo5;
 public class CompareSwitch {
 
   public static void usingIf() {
-    String day = "SUN";
+    String day = "MON";
+
     if (day.equals("MON") || day.equals("TUE") || day.equals("WED") || day.equals("THU")) {
       System.out.println("Time to work");
     } else if (day.equals("FRI")) {
@@ -16,7 +17,9 @@ public class CompareSwitch {
 
 
     switch (day) {
-      case "MON":
+      /*case "MON":
+        System.out.println("Is monday!");
+        System.out.println("Additional sentence");*/
       case "TUE":
       case "WED":
       case "THU":
@@ -26,13 +29,17 @@ public class CompareSwitch {
         System.out.println("Nearing weekend");
         break;
       case "SAT":
-      case "SUN":
+      /*case null:
         System.out.println("Weekend!");
-        break;
+        break;*/
       default:
         System.out.println("Invalid day?");
     }
 
 
+  }
+
+  public static void main(String[] args) {
+    usingIf();
   }
 }

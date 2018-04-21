@@ -18,7 +18,7 @@ public class TestIf {
     if (allow) {
 
     }
-    if (allow = true) {
+    if (allow) {
       System.out.println("value is true");
     } else {
       System.out.println("value is false");
