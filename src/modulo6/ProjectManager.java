@@ -13,6 +13,8 @@ public class ProjectManager extends Manager {
 
   @Override
   public void interview() {
+    System.out.println(Interviewer.MINIMUM_AGE);
     System.out.println("Entrevistar");
   }
+
 }

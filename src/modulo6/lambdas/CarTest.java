@@ -2,41 +2,68 @@ package modulo6.lambdas;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
+import java.util.function.Predicate;
 
 /**
  * Created by JavierSainz on 6/2/17.
  */
 public class CarTest {
 
+  static int MIN_VALUE = 20_000;
   public static void main(String[] args) {
+
+    String honda = "Honda";
+
     List<Car> cars = getCars();
-    cars = findCompactCars(cars);
-    cars = findEconomicCars(cars);
+
+    // honda = "a";
+
+    Searchable compactFilter = new SearchCompact();
+    Searchable priceFilter = new SearchPrice();
+    Searchable hondaFilter = new FindHonda();
+
+    cars = findCars(cars, (Searchable) car -> car.getType().equals(CarType.COMPACT));
+
+    cars = findCars(cars, (Predicate<Car>) car -> car.getCostUSD() > MIN_VALUE);
+
+    // final local variables
+    cars = findCars(cars, (Searchable) car -> car.getBrand().equals(honda));
+
+    // cars = findCars(cars, car -> car.getModel().equals("Fit"));
+
     System.out.println(cars);
     System.out.println(cars.size());
 
+    Searchable s = car -> true;
+
+    Searchable[] filters = {car -> true};
+
+    Runnable r = () -> {};
+
+    r.run();
+
   }
 
-  static List<Car> findCompactCars(List<Car> cars) {
-    List<Car> compactCars = new ArrayList<>();
+  static List<Car> findCars(List<Car> cars, Searchable searchable) {
+    List<Car> filteredList = new ArrayList<>();
     for (Car car : cars) {
-      if (car.getType().equals(CarType.COMPACT)) {
-        compactCars.add(car);
+      if (searchable.search(car)) {
+        filteredList.add(car);
       }
     }
-    return compactCars;
+    return filteredList;
   }
 
-  static List<Car> findEconomicCars(List<Car> cars) {
-    List<Car> twentyKCars = new ArrayList<>();
+  static List<Car> findCars(List<Car> cars, Predicate<Car> filter) {
+    List<Car> filteredList = new ArrayList<>();
     for (Car car : cars) {
-      if (car.getCostUSD() > 20000) {
-        twentyKCars.add(car);
+      if (filter.test(car)) {
+        filteredList.add(car);
       }
     }
-    return twentyKCars;
+    return filteredList;
   }
+
 
   static List<Car> getCars() {
     ArrayList<Car> cars = new ArrayList<>(20);
@@ -64,3 +91,4 @@ public class CarTest {
   }
 
 }
+

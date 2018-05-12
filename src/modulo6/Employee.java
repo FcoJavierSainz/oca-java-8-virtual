@@ -1,6 +1,6 @@
 package modulo6;
 
-public abstract class Employee {
+public class Employee {
 
   private String name;
   private String address;
@@ -9,10 +9,16 @@ public abstract class Employee {
   private String phoneNumber;
 
   public Employee(String newName) {
-    this.name = newName;
+    setName(newName);
   }
 
-  public abstract void work();
+  public void printNameEmployee() {
+    System.out.println(name);
+  }
+
+  protected void work() {
+    System.out.println("Trabajar");
+  }
 
   public String getName() {
     return name;
@@ -20,6 +26,10 @@ public abstract class Employee {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public Employee clone() {
+    return new Employee(this.name);
   }
 
   public String getAddress() {

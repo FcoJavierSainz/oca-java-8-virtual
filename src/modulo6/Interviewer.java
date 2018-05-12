@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 
 public interface Interviewer {
 
+  int MINIMUM_AGE = 18;
+
   void interview();
 
   default void submitInterviewStatus() {
