@@ -26,6 +26,8 @@ public class CarTest {
 
     cars = findCars(cars, (Predicate<Car>) car -> car.getCostUSD() > MIN_VALUE);
 
+    Searchable byName = car -> car.getModel().equals("City");
+
     // final local variables
     cars = findCars(cars, (Searchable) car -> car.getBrand().equals(honda));
 

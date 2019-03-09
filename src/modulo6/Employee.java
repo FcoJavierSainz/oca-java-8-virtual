@@ -8,6 +8,8 @@ public class Employee {
   private int experience;
   private String phoneNumber;
 
+  public static int x = 0;
+
   public Employee(String newName) {
     setName(newName);
   }
@@ -62,5 +64,9 @@ public class Employee {
 
   public void setPhoneNumber(String phoneNumber) {
     this.phoneNumber = phoneNumber;
+  }
+
+  public static void otro() {
+
   }
 }

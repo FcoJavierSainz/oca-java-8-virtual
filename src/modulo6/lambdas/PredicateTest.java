@@ -14,10 +14,13 @@ public class PredicateTest {
 
     Predicate<String> p2 = s -> s.endsWith("r");
 
-    System.out.println(p.or(p2).negate().test("Arthura"));
+    System.out.println(p2.test("r"));
+
+    System.out.println(p.or(p2).negate().test("aArthura"));
 
     Predicate<String> isEqual = Predicate.isEqual("Arthur");
 
     System.out.println(isEqual.test("Arthur"));
+    System.out.println(isEqual.test("Arthura"));
   }
 }

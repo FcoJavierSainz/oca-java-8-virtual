@@ -18,6 +18,13 @@ public class MultipleExceptions {
     } catch (IOException ioe) {
       System.out.println("File Closing Exception");
     } finally {
+      try {
+        if (fis != null) {
+          fis.close();
+        }
+      } catch (IOException e) {
+        e.printStackTrace();
+      }
       System.out.println("finally");
     }
     System.out.println("Next task..");

@@ -40,6 +40,8 @@ public class TestEmployees {
 
     e.work();
 
+    int y = ProjectManager.x;
+
 
     List<Trainable> t  = new ArrayList<>();
 

@@ -5,7 +5,7 @@ public class TestCasting {
   public static void main(String[] args) {
     A a1 = new A();
     A a2 = new B();
-    B b1 = new E();
+    B b1 = new C();
 
     C c2 = (C) b1;
 

@@ -16,20 +16,14 @@ class RiverRafting {
     }
   }
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws FallInRiverException, DropOarException {
     RiverRafting riverRafting = new RiverRafting();
     try {
       riverRafting.crossRapid(11);
       riverRafting.rowRaft("happy");
       System.out.println("Enjoy River Rafting");
-    } catch (FallInRiverException e1) {
-      System.out.println("Get back in the raft");
-    }
-    catch (DropOarException e2) {
-      System.out.println("Do not panic");
-    }
-    finally {
-      System.out.println("Pay for the sport");
+    } finally {
+      System.out.println("Finally");
     }
     System.out.println("After the try block");
 
